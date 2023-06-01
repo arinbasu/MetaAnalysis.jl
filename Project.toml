@@ -1,0 +1,13 @@
+name = "MetaAnalysis"
+uuid = "09521429-32ac-4aec-8e5f-91f1cf1e3144"
+authors = ["Arin Basu"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

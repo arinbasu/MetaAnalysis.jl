@@ -16,6 +16,7 @@ DataFrames = "1.5.0"
 GLM = "1.8.3"
 HypothesisTests = "0.11.0"
 Distributions = "0.25.97"
+CairoMakie = "0.10.5"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"

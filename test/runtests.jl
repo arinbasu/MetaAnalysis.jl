@@ -1,5 +1,5 @@
 using MetaAnalysis
-using Test
+using Test, DataFrames
 
 @testset "MetaAnalysis.jl" begin
     # Write your tests here.

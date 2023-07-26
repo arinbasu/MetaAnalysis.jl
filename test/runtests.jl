@@ -51,7 +51,7 @@ df2 = select(df, :study, :y, :v)
 
 
 # test tausq works
-@test MetaAnalysis.tauSquare(df.y, df.v)
+@test MetaAnalysis.tausq(df.y, df.v)
 
 # Now write the random effects model function
 

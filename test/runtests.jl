@@ -1,3 +1,4 @@
+using DataFrames
 using MetaAnalysis
 using Test
 
@@ -44,21 +45,30 @@ df2 = select(df, :study, :y, :v)
 
 
 # test fixed effects model 
-@test MetaAnalysis.fixedEffects(df.y, df.v)
+@testset begin
+	MetaAnalysis.fixedEffects(df.y, df.v)
+	@test true
+end
 
 # Now write the random effects model
 
 
 
 # test tausq works
-@test MetaAnalysis.tauSquare(df.y, df.v)
+@testset begin
+	MetaAnalysis.tausq(df.y, df.v)
+	@test true
+end
 
 # Now write the random effects model function
 
 
 
 # test for random effects
-@test MetaAnalysis.randEffects(df.y, df.v)
+@testset begin
+	MetaAnalysis.randEffects(df.y, df.v)
+	@test true
+end
 
 # fixed effects weights
 df.wf = 1 ./ df.v
@@ -81,5 +91,8 @@ select(df, :study, :y, :wf, :relwf, :relwr)
 
 
 
-@test MetaAnalysis.isq(df.study, df.y, df.v)
+@testset begin
+	MetaAnalysis.isq(df.study, df.y, df.v)
+	@test true
+end
 end
